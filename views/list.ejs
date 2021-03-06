@@ -1,0 +1,31 @@
+
+<%- include("header") -%>
+
+    <div class="box" id="heading">
+        <h1 style="text-align: center; ">
+           <%= kindday %> List
+        </h1>
+    </div>
+
+
+    <div class="box">
+
+        <% for(var i=0; i<newItems.length; i++){ %>
+            <div class="item">
+                <input type="checkbox">
+                <p>
+                    <%= newItems[i] %>
+                </p>
+            </div>
+        <% }%>
+
+        <form method="POST" action="/">
+            <input type="text" placeholder="need to Do!" name="newItem" autocomplete="off">
+            <button type="submit" name="button" value=<%= listTitle %>>+</button>
+        </form>
+
+    </div>
+
+    <%- include("footer") -%>
+
+
